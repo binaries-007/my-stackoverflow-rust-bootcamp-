@@ -1,0 +1,43 @@
+POST http://127.0.0.1:8000/question
+content-type: application/json
+
+{
+    "title": "Newly Created Question",
+    "description": "My Description"
+}
+
+###
+GET http://127.0.0.1:8000/questions
+
+###
+DELETE http://127.0.0.1:8000/question
+Content-Type: application/json
+
+{
+    "question_uuid": "a7aa4566-1717-4eae-88c0-f69e02943748"
+}
+
+###
+POST http://localhost:8000/answer
+Content-Type: application/json
+
+{ 
+    "question_uuid":"bf1128fa-19c2-44b3-8c2a-fbca4a2d1778",
+    "content": "test question"
+}
+
+###
+GET http://localhost:8000/answers
+Content-Type: application/json
+
+{
+    "question_uuid": "bf1128fa-19c2-44b3-8c2a-fbca4a2d1778"
+}
+
+###
+DELETE http://localhost:8000/answer
+Content-Type: application/json
+
+{ 
+    "answer_uuid": "a0d9658f-39f2-4dfd-a645-02055ed08503"
+}

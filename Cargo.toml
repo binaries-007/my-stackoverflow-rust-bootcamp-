@@ -1,0 +1,21 @@
+[package]
+name = "my-stackoverflow"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+async-trait = "0.1.81"
+axum = "0.7.5"
+dotenvy = "0.15.7"
+log = "0.4.22"
+pretty_env_logger = "0.5.0"
+serde = { version = "1.0.208", features = ["derive"] }
+sqlx = { version = "0.8.0", features = [
+    "postgres",
+    "runtime-tokio",
+    "time",
+    "tls-native-tls",
+    "uuid",
+] }
+thiserror = "1.0.63"
+tokio = { version = "1.0", features = ["macros", "rt-multi-thread"] }
